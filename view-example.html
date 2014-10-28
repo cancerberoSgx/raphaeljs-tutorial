@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Raphaël tutorial - Getting Started - Example 1</title>    
+    <script type="text/javascript" src="raphael-min.js"></script>    
+  </head>
+  <body>
+  
+    
+	<!-- the html element where to put the paper -->
+	<div id="paper1"></div>
+	
+	<!-- a script that create's a paper and a rectangle -->
+	<script type="text/javascript">
+	
+	//define a raphaël extension "ellipseButton" - it will create a new kind of shape (type=="set") with an ellipse and text
+	(function(){
+		/**
+		 * an ellipse button is a raphael set that contains properties 
+		 * "text" for the text shape and "bg" for the background (ellipse) shape. Usage: 
+		 * <pre>
+		 * var button1 = paper.ellipseButton(100, 100, "Run Example", function(evt){
+		 *	 this.text.attr({"text": "clicked"});
+		 * });
+		 * </pre>
+		 */
+		Raphael.fn.ellipseButton = function(x, y, rx, ry, text) {
+			var b = this.set();
+			var bg = this.ellipse(x,y,80,60).attr({fill: "red"});
+			var text = this.text(x,y, "Run example");
+			b.push(bg);
+			b.push(text);
+			b.text = text;
+			b.bg = bg;			
+			return b;
+		};
+	})();
+	
+	var paper = Raphael(0,0,500,500);
+	var button1 = paper.ellipseButton(100, 100, 80,40,"Run Example");
+	button.click(function(evt){
+		button1.text.attr({"text": "clicked"});
+	});
+	button1.attr({"font-size": "22px"});
+	
+	</script>
+	
+  </body>
+</html>

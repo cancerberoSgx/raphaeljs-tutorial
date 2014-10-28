@@ -1,0 +1,61 @@
+/* ::::: http://raphaeljs.com/dr.css ::::: */
+
+html, body { height: 100%; margin: 0pt; padding: 0pt; }
+#dr-js { background: none repeat scroll 0% 0% rgb(153, 153, 153); margin: 0pt; padding: 0pt; overflow-y: hidden; }
+.dr-doc { background: none repeat scroll 0% 0% rgb(238, 238, 238); border-right: 3px solid rgb(238, 238, 238); float: right; font: 300 16px/1.4 "Myriad Pro","Helvetica Neue",Helvetica,"Arial Unicode MS",Arial,sans-serif; height: 100%; margin: 0pt; overflow: auto; padding: 0pt 30px; width: 800px; }
+.dr-toc { margin: 0pt; padding: 0pt 16px; background: none repeat scroll 0% 0% rgb(221, 221, 221); list-style: none outside none; font-family: Menlo,Consolas,Monaco,"Lucida Console",monospace; overflow: auto; border-right: 3px solid rgb(221, 221, 221); height: 100%; float: right; width: 240px; }
+#dr { margin: 0pt auto; width: 1152px; height: 100%; }
+*::-moz-selection { background: none repeat scroll 0% 0% rgb(204, 0, 0); color: rgb(255, 255, 255); }
+.dr-doc code, .dr-type em, .dr-returns em, .dr-property em { font-family: Menlo,Consolas,Monaco,"Lucida Console",monospace; }
+pre.code code { color: rgb(255, 255, 255); }
+pre.code { background: none repeat scroll 0% 0% rgb(51, 51, 51); color: rgb(255, 255, 255); overflow-x: auto; padding: 16px 30px; margin: 0pt -30px; }
+code b { color: rgb(233, 223, 143); font-weight: normal; }
+code i, code i *, code i .d { color: rgb(139, 153, 103); font-style: normal; }
+code .s { color: rgb(231, 190, 97); }
+code .d { color: rgb(207, 106, 76); }
+code .c, code .c * { color: rgb(153, 153, 153); font-style: italic; }
+em.amp { font-family: Baskerville,"Goudy Old Style",Palatino,"Book Antiqua",serif; font-style: italic; }
+dl.dr-parameters { margin: 8px 0pt; }
+dt.dr-param { color: rgb(102, 102, 102); font-weight: 400; float: left; margin-right: 16px; min-width: 160px; }
+dd.dr-type { margin: 0pt; }
+dd.dr-description { display: table; min-height: 24px; border: 1px solid rgb(238, 238, 238); }
+.dr-type { float: left; }
+.dr-type em, .dr-returns em, .dr-property em { background: none repeat scroll 0% 0% rgb(204, 204, 204); border-radius: 5px 5px 5px 5px; float: left; font-size: 0.75em; font-style: normal; font-weight: 700; margin: 0pt 8px 0pt 0pt; min-width: 80px; padding: 2px 5px; text-align: center; }
+.dr-type em.amp, .dr-returns em.amp, .dr-property em.amp { float: none; background: none repeat scroll 0% 0% transparent; font-size: 1em; font-weight: 400; font-style: italic; margin: 0pt; padding: 0pt; min-width: 0pt; }
+.dr-property em.dr-type { margin: 4px 16px 0pt 0pt; }
+em.dr-type-string { background: none repeat scroll 0% 0% rgb(225, 237, 177); color: rgb(61, 76, 0); }
+em.dr-type-object { background: none repeat scroll 0% 0% rgb(237, 177, 177); color: rgb(76, 0, 0); }
+em.dr-type-function { background: none repeat scroll 0% 0% rgb(207, 177, 237); color: rgb(38, 0, 76); }
+em.dr-type-number { background: none repeat scroll 0% 0% rgb(177, 201, 237); color: rgb(0, 30, 76); }
+em.dr-type-boolean { background: none repeat scroll 0% 0% rgb(177, 237, 201); color: rgb(0, 76, 30); }
+em.dr-type-array { background: none repeat scroll 0% 0% rgb(237, 213, 177); color: rgb(76, 45, 0); }
+dd.dr-optional { display: none; }
+ol.dr-json { background: none repeat scroll 0% 0% rgb(221, 221, 221); list-style: none outside none; margin: 0pt -30px; padding: 16px 30px; }
+ol.dr-json .dr-json-key { float: left; min-width: 50px; margin-right: 16px; }
+ol.dr-json .dr-json-description { display: table; }
+ol.dr-json ol.dr-json { margin: 0pt; padding: 0pt 0pt 0pt 50px; }
+h1 { font-weight: 400; font-size: 2.6em; margin: 0pt; }
+h2, h3, h4, h5 { margin: 1em 0pt 0.5em; padding: 6px 0pt 0pt; font-weight: 600; position: relative; }
+h4 { font-size: 20px; }
+h3 { font-size: 28px; }
+h2 { font-size: 38px; }
+h2.dr-method, h3.dr-method, h4.dr-method, h5.dr-method { color: rgb(153, 0, 0); }
+h2.dr-property, h3.dr-property, h4.dr-property, h5.dr-property { color: rgb(0, 0, 153); }
+i.dr-trixie { border-width: 10px; border-style: solid; border-color: rgb(238, 238, 238) rgb(238, 238, 238) rgb(238, 238, 238) rgb(153, 153, 153); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; height: 0pt; margin-left: -30px; margin-top: -10px; overflow: hidden; position: absolute; top: 50%; width: 0pt; }
+p.header { font-size: 19px; font-weight: 600; margin: 1em 0pt 0.3em; }
+.dr-returns { margin-top: 16px; }
+.dr-returns .dr-title { float: left; margin-right: 16px; width: 160px; }
+.dr-toc a { display: block; text-decoration: none; color: rgb(51, 51, 51); padding-top: 8px; position: relative; z-index: 1000; }
+.dr-toc li.dr-lvl1 a { padding-left: 1em; }
+.dr-toc li.dr-lvl2 a { padding-left: 2em; }
+.dr-toc a.dr-property { color: rgb(51, 51, 153); }
+.dr-toc a.dr-method { color: rgb(153, 51, 51); }
+.dr-toc a:hover { text-shadow: 0pt 0pt 2px rgb(51, 51, 51); }
+.dr-toc a.dr-property:hover { text-shadow: 0pt 0pt 2px rgb(102, 102, 204); }
+.dr-toc a.dr-method:hover { text-shadow: 0pt 0pt 2px rgb(204, 102, 102); }
+a.dr-hash, a.dr-sourceline { color: rgb(51, 51, 51); font-family: Menlo,"Arial Unicode MS",sans-serif; margin: 0pt 0pt 0pt 0.3em; opacity: 0; text-decoration: none; }
+a.dr-link { position: relative; color: rgb(56, 117, 192); }
+a.dr-link:hover { text-shadow: 0pt 1px 2px rgb(153, 153, 153); bottom: 1px; padding-bottom: 1px; }
+a.dr-link:visited { color: rgb(112, 81, 188); }
+h2:hover a.dr-hash, h3:hover a.dr-hash, h4:hover a.dr-hash, h5:hover a.dr-hash, h2:hover a.dr-sourceline, h3:hover a.dr-sourceline, h4:hover a.dr-sourceline, h5:hover a.dr-sourceline { opacity: 1; }
+p { margin: 0pt 0pt 0.5em; }

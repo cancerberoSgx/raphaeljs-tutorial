@@ -1,0 +1,178 @@
+body {
+	background-color: black;
+	font-family: serif;
+}
+#wrapper {
+	width: 90%;
+	background-color: #ededed;
+	margin-left: auto; 
+	margin-right: auto;
+	padding: 20px;
+}
+h1 {
+	margin-top: 5em;
+}
+h2 {
+	margin-top: 2em;
+}
+h3 {
+	margin-top: 1em;
+}
+#generated-toc {
+	padding-left: 50px;
+}
+table .title, table .title td {
+	background-color: #a1a1a1;
+	font-size: 18px;
+	font-weight: bold;
+	font-decoration: underline;
+}
+table td {
+	border: 1px solid #a1a1a1;
+	padding: 0;
+	margin: 4px;
+}
+.title {
+	text-align: center;
+	font-size: 33px;
+	font-weight: bold;
+}
+.code-run-button {
+/* 	float:: right; */
+/* 	position: relative;  */
+/* 	right: -20px; */
+/* 	top: -100px; */
+	border: 1px solid black;
+	background-color: #edaa44;
+	opacity: 0.8;
+	cursor: pointer;
+}
+.author{
+	font-size: 1.1em;
+	font-family: courier;
+	text-align: right;
+	margin-right: 1.1em;	
+}
+.raphael-ref {
+	display: none;
+}
+.code {
+	font-family: courier;
+	font-weight: normal;
+	white-space:pre;
+	background-color: #dddddd;
+	font-size: 0.9em;	
+	width: 100%;
+}
+.code-run {
+	height: 8em;
+	overflow: scroll;
+}
+
+
+/* code-method-doc */
+.code-method-doc {
+	margin: 1em 1em 1.2em 2em;	
+}
+.code-method-doc .signature, .code-method-doc .param, .code-method-doc .return {
+	display: block;
+	font-family: courier;
+	margin-left: 2em; 	
+}
+
+.code-method-doc .signature {
+	font-weight: bold;
+}
+
+.note {
+	margin-left: 1.45em;
+}
+.note-icon {
+	font-size: 4em;
+	margin: -0.12em 0.15em 0em 1em;
+	padding:0px;
+	font-family: arial;
+	font-weight: bolder;
+	float: left;
+}
+.emph {
+	font-weight: bold;
+	text-style: oblique;	
+}
+.quote {
+	text-align: right;
+	font-family: "Verdana", "Arial", sans-serif;
+	font-style: oblique;
+	margin: 1em 2em 1em 5em;
+	font-size: 0.8em;
+}
+
+
+
+
+
+
+/* dialogs */
+
+#exampleDialog {	
+	display: none;
+	position: fixed;	
+	background-color: #ededed; 
+	opacity: 0.8;
+	z-index: 3;
+	border: 2px solid #1e1e1e;
+}
+#exampleDialogClose {
+	border: 2px dotted black;
+	padding: 2px;
+	margin: 10px;
+	z-index: 2;
+	font-size: 2em;
+	font-weight: bolder;
+	cursor: pointer;
+}
+#refererenceDialog {	
+	display: none;
+	position: fixed;	
+	background-color: #ededed; 
+	opacity: 0.95;
+	width: 80%;
+	margin: 20px;
+	z-index: 3;
+}
+#refererenceDialogClose {
+	border: 2px dotted black;
+	padding: 2px;
+	margin: 10px;
+	z-index: 2;
+	font-size: 2em;
+	font-weight: bolder;
+	cursor: pointer;
+}
+#refererenceDialogFrame {
+	width: 100%;
+	height: 300px;
+}
+.raphael-ref-link {
+	border-bottom: 1px solid black;
+	font-family: Courier;
+	cursor: pointer;
+}
+
+
+
+/* from raphael reference copy&paste: */
+.dr-json-key {
+	font-family: courier;
+	margin.right: 100px;
+}
+.dr-type {
+	font-family: courier;
+	margin: 10px;	
+}
+.dr-json-description {
+/* 	font-family: courier; */
+	margin: 10px;	
+}
+
+

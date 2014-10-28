@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>raphael4gwt ext test</title>
+<script type="text/javascript" language="javascript" src="../../../src/org/sgx/raphael4gwt/public/raphael.js"></script>
+<script type="text/javascript" language="javascript" src="../../../src/org/sgx/raphael4gwt/public/raphael-ext.js"></script>
+
+<!-- 
+<style type="text/css">
+#text1 {
+	font-size: 22px; 
+}
+
+</style>
+ -->
+</head>
+
+
+
+<body>
+
+	<script type="text/javascript" language="javascript">
+
+// Raphael.el.nodeSetAttribute = function(attrs) {
+// 	for(var i in attrs) {
+// 		this.node.setAttribute(i, attrs[i]); 
+// 	}	
+// };
+// Raphael.el.nodeSetStyle = function(attrs) {
+// 	for(var i in attrs) {
+// 		this.node.style.setProperty(i, attrs[i]); 
+// 	}	
+// };
+
+// //css tests
+// var paper = Raphael(0,0,1600,1600); 
+// var rect1 = paper.rect(10,120,120,50,3).attr({fill: "red"}); 
+// rect1.nodeSetAttribute({"id": "el123"}); 
+
+// var text1 = paper.text(100,10, "hello world").attr({fill: "red"}); 
+// text1.nodeSetAttribute({"id": "text1"}); 
+
+// text1.nodeSetStyle({"font-size": 33}); 
+
+
+
+var paper = Raphael(0,0,600,600); 
+var rect1 = paper.rect(10,120,120,50,3).attr({fill: "red"});
+rect1.data("class", "pepe"); 
+var path1 = paper.path("m10,10,l100,160,l200,10z").attr({"stroke-width": 3}); 
+var c1 = paper.circle(190,80, 60).data("class123", "value234");
+var text = paper.text(300,100,"HELLO"); 
+var css1 = 
+	"rect, path {fill: #ededed}"+
+	".pepe {stroke: red; stroke-width: 12}"+
+	"[class123=value234], text {font-size: 16px; stroke-dasharray: -.}"; 
+var styleName1 = "sty1"; 
+paper.styleAdd(styleName1, css1, true);
+
+alert("now modify the stylesheets and re-apply the style programatically"); 
+//get ths stylesheet object
+var sty1 = paper.styleGet(styleName1); 
+//get the first rule object - it is an array [selector:string, rule:obj]
+var rule1 = sty1[0]; //this is the rule rect, path...
+var rule1Value = rule1[1];  //the rule 1 value part
+rule1Value["stroke"]="yellow"; //change it!
+
+//now remove the second rule (.pepe {...})
+sty1.splice(1, 1); 
+
+//finnaly re-apply the stylesheet to reflect changes in the paper. 
+paper.styleApply(styleName1); 
+
+//or reapply a stylesheet only to certain shapes (efficient)
+paper.styleGet(styleName1)[0][1]["stroke-dasharray"]="-."; 
+paper.styleApply(styleName1, [path1]);
+
+</script>
+
+</body>
+</html>

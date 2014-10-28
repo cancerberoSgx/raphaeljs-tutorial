@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Raphaël tutorial - Getting Started - Example 1</title>    
+    <script type="text/javascript" src="../raphael-min.js"></script>    
+  </head>
+  <body>
+  
+	<!-- the html element where to put the paper -->
+	<div id="paper1"></div>
+	
+	<!-- a script that create's a paper and a rectangle -->
+	<script type="text/javascript">
+	var paper = Raphael("paper1", 500,500);
+	var rect1 = paper.rect(20,30,100,12).attr({fill: "orange"});
+	</script>
+	
+  </body>
+</html>

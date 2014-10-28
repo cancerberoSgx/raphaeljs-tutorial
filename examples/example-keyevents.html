@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Raphaël tutorial - Events - Keyboard events Example 1</title>    
+    <script type="text/javascript" src="../raphael-min.js"></script>    
+     <script type="text/javascript" src="../jquery-1.7.2.min.js"></script>
+     <script type="text/javascript" src="../jquery.jkey.js"></script>    
+  </head>
+  <body>
+  
+	<!-- the html element where to put the paper -->
+	<div id="paper1"></div>
+	
+	<!-- a script that create's a paper and a rectangle -->
+	<script type="text/javascript">
+var paper = Raphael("paper1", 500,500);
+paper.text("please press the arrow keys for shaping the ellipse");
+var ellipse = paper.ellipse(200, 200, 100, 100).attr({fill: "orange"});
+$(document).keydown(function(event) {
+	var arrowKeys = {"left": 37, "up": 38, "right": 39, "down": 40};
+	if(event.keyCode == arrowKeys["left"]) {
+		ellipse.animate({rx: ellipse.attr("rx")-40}, 1000, "bounce");
+	}
+	else if(event.keyCode == arrowKeys["up"]) {
+		ellipse.animate({ry: ellipse.attr("ry")+40}, 1000, "bounce");			
+	}
+	else if(event.keyCode == arrowKeys["right"]) {
+		ellipse.animate({rx: ellipse.attr("rx")+40}, 1000, "bounce");
+	}
+	else if(event.keyCode == arrowKeys["down"]) {
+		ellipse.animate({ry: ellipse.attr("ry")-40}, 1000, "bounce");
+	}
+});
+
+	</script>
+	
+  </body>
+</html>
